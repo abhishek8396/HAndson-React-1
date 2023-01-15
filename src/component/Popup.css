@@ -1,0 +1,17 @@
+.popup{
+    width: 500px;
+    height: 300px;
+    border: black solid 2px;
+    background-color: aqua;
+    color: red;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.stylepopup{
+    position: relative;
+    left: 228px;
+}
+

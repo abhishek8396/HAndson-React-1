@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import Popup from "./component/Popup";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import  {useState} from "react";
+
+
+function App(){
+  const [buttonpopup, setButtonpopup] = useState(false);
+  
+
+  return(
+    <div className="main">
+      <h1 className="First">Styling using Functional and Class Component</h1>
+      <button className="button1" onClick={()=>setButtonpopup(true)}>To see Styling in function Component</button>
+      <button className="button2">To see styling in class component</button>
+      <Popup trigger={buttonpopup} setTrigger={setButtonpopup}>
+      <h1>This is created function component.</h1>
+                <p>This is done using external CSS</p>
+                <p>This is using internal CSS.</p>
+      </Popup>
+      
     </div>
   );
 }
-
 export default App;
